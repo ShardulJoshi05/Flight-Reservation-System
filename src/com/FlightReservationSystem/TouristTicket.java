@@ -1,16 +1,15 @@
 package com.FlightReservationSystem;
 import java.util.*;
 
-public class TouristTicket {
+public class TouristTicket extends Ticket{
     private String hotelAddress;
 
     private ArrayList<String> selectedTouristLocation=new ArrayList<String>();
     //constructor for hotel address
-    public TouristTicket(String hotelAddress){
-        this.hotelAddress=hotelAddress;
-    }
     //constructor for 5 locations
-    public TouristTicket(String loc1,String loc2,String loc3,String loc4,String loc5){
+    public TouristTicket(String pnr,String from,String to,String departureDateTime,String arrivalDateTime,String seatNo,float price,Flight flight,Passenger passenger,String loc1,String loc2,String loc3,String loc4,String loc5,String hotelAddress){
+        super(pnr,from,to,departureDateTime,arrivalDateTime,seatNo,price,flight,passenger);
+        this.hotelAddress=hotelAddress;
         selectedTouristLocation.add(loc1);
         selectedTouristLocation.add(loc2);
         selectedTouristLocation.add(loc3);
