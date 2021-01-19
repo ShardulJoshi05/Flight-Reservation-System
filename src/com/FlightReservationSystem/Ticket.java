@@ -1,18 +1,19 @@
 package com.FlightReservationSystem;
 
-public class Ticket {
-    public String pnr;
-    public String from;
-    public String to;
-    public String flight;
-    public String departureDateTime;
-    public String arrivalDateTime;
-    public String passenger;
-    public String seatNo;
-    public float price;
-    public boolean cancelled;
-    //constructor to take parameters
-    public Ticket(String pnr,String from,String to,String departureDateTime,String arrivalDateTime,String seatNo,float price){
+public class Ticket{
+    private String pnr;
+    private String from;
+    private String to;
+    public Flight flight;
+    private String departureDateTime;
+    private String arrivalDateTime;
+    public Passenger passenger;
+    private String seatNo;
+    private float price;
+    private boolean cancelled;
+    //constructor to take parameter
+
+    public Ticket(String pnr,String from,String to,String departureDateTime,String arrivalDateTime,String seatNo,float price,Flight flight,Passenger passenger){
         this.pnr=pnr;
         this.from=from;
         this.to=to;
@@ -21,7 +22,12 @@ public class Ticket {
         this.seatNo=seatNo;
         this.price=price;
         this.cancelled=false;
+        this.flight=flight;
+        this.passenger=passenger;
     }
+
+
+
     public String getTicketDetails(){
         return this.pnr+" "+this.from+" "+this.to+" "+this.departureDateTime+" "+this.arrivalDateTime+" "+this.seatNo+" "+this.price;
     }
@@ -44,5 +50,7 @@ public class Ticket {
     public void cancel(){
         this.cancelled=true;
     }
+
+
 }
 

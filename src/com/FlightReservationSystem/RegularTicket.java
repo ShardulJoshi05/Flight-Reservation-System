@@ -1,7 +1,7 @@
 package com.FlightReservationSystem;
 
 public class RegularTicket {
-    public String specialServices;
+    private String specialServices;
     //constructor
     public RegularTicket(String specialServices){
         this.specialServices=specialServices;

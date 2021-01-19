@@ -1,9 +1,10 @@
 package com.FlightReservationSystem;
 import java.util.*;
-public class TouristTicket {
-    public String hotelAddress;
 
-    ArrayList<String> selectedTouristLocation=new ArrayList<String>();
+public class TouristTicket {
+    private String hotelAddress;
+
+    private ArrayList<String> selectedTouristLocation=new ArrayList<String>();
     //constructor for hotel address
     public TouristTicket(String hotelAddress){
         this.hotelAddress=hotelAddress;

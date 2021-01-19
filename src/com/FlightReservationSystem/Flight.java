@@ -1,10 +1,10 @@
 package com.FlightReservationSystem;
 
 public class Flight {
-    public String flightNumber;
-    public String airline;
-    public int capacity;
-    public int bookedSeats;
+    private String flightNumber;
+    private String airline;
+    private int capacity;
+    private int bookedSeats;
     //constructor
     public Flight(String flightNumber,String airline,int capacity,int bookedSeats){
         this.flightNumber=flightNumber;
