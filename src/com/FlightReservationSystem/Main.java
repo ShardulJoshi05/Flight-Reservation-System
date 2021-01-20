@@ -14,5 +14,15 @@ public class Main {
         //TouristTicket Object
         TouristTicket obj6=new TouristTicket("B1234","Mumbai","Shimla","20/1/2020 3:00PM","20/1/2020 5:00PM","26",15000.00f,flight,passenger,"Ahmedabad","Bihar","Shimla","Kashmir","Chandigarh","Shimla");
         System.out.println(obj6.getTicketDetails());
+        System.out.println(obj6.getHotelAddress());
+        System.out.println(obj6.getTouristLocation());
+        obj6.removeTouristLocation("Shimla");
+        obj6.addTouristLocation("Vellore");
+        //print pnr by concept of polymorphism
+        printTicketDetails(obj6);
+        printTicketDetails(obj7);
+    }
+    public static void printTicketDetails(Ticket obj){
+        System.out.println(obj.getPnr());
     }
 }

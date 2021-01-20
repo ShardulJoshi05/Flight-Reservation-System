@@ -25,6 +25,8 @@ public abstract class Ticket{
         this.passenger=passenger;
     }
 
+
+
     public String getPnr(){
         return this.pnr;
     }
